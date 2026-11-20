@@ -1,0 +1,2 @@
+# Add pinned dependencies after the Python audio analyzer design is finalized.
+# Planned: numpy, soundfile, librosa (if needed), matplotlib (for reports)
