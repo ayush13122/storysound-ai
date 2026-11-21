@@ -68,3 +68,16 @@ storysound-ai/
 
 ### Responsible use
 Use original scripts and audio assets that you own or are licensed to use. Only clone or imitate a voice with the voice owner's explicit authorization. Do not upload API keys, private credentials, or unlicensed audio assets.
+
+### Production tools
+- Structured bilingual dialogue: `assets/scripts/bilingual_story.json`
+- Local credit estimator: `src/credit_budget.py`
+- Local setup instructions: `docs/INSTALL_BILINGUAL_UPDATE.md`
+
+Run the local estimator without calling ElevenLabs:
+
+```powershell
+python src/credit_budget.py
+```
+
+Before voice generation, update the balance snapshot and confirm actual voice multipliers in the ElevenLabs interface. The script is a local estimate only and does not read the live account balance.
