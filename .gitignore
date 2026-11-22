@@ -17,3 +17,7 @@ Thumbs.db
 *.aiff
 *.aup3
 .idea/
+
+# Audacity project databases (keep local; do not commit)
+*.aup3
+*.aup4
