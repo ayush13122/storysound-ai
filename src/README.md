@@ -17,3 +17,16 @@ The script scans `assets/raw_audio/hindi/` and `assets/raw_audio/english/`, chec
 - `reports/audio_audit_summary.json`
 
 This is a local-only operation. It does not call ElevenLabs or consume API credits. It uses the existing `numpy` and `soundfile` dependencies in `requirements.txt`.
+
+
+## Story Master Builder
+
+Join the five scene WAVs into one continuous WAV master per language:
+
+```powershell
+python src/build_story_masters.py
+```
+
+By default, the script inserts 1.5 seconds of silence between scenes. Use `--gap-seconds 2.0` to choose a different pause. It reads from `assets/raw_audio/hindi/` and `assets/raw_audio/english/`, then writes the masters under `output/hindi/` and `output/english/`. Scene timing is saved in `reports/story_master_manifest.json`.
+
+The script streams audio in blocks, verifies that each language has five WAVs with matching sample rate and channel count, preserves the source files, and does not normalize or add effects. It runs locally and does not call ElevenLabs or consume credits.
