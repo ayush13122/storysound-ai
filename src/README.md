@@ -47,3 +47,13 @@ python src/analyze_final_mixes.py --hindi "D:\path\Hindi.wav" --english "D:\path
 ```
 
 The read-only analyzer reports duration, sample rate, channels, encoding, sample peak, RMS, near-silence regions and clipped samples. When FFmpeg is installed and on PATH, it also measures EBU R128 integrated loudness (LUFS), loudness range (LRA), and true peak. It does not change the audio or call ElevenLabs. Reports are written to `reports/final_mix_audio_audit.json` and `reports/final_mix_audio_audit.csv`.
+
+
+## Final Mix Audit Results
+
+The most recent final-mix audit snapshot is documented in `reports/final_mix_audio_audit.md`. Machine-readable measurements are available in:
+
+- `reports/final_mix_audio_audit_snapshot.json`
+- `reports/final_mix_audio_audit_snapshot.csv`
+
+The report records the initial pre-revision measurement and the latest gain-reduced re-audit. It also clarifies that the near-full-scale sample counter is not definitive proof of hard clipping. The analyzer is read-only and makes no ElevenLabs API calls.
