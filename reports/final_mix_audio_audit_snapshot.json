@@ -1,0 +1,113 @@
+{
+  "project": "StorySound AI — 2:13 AM: The Last Call",
+  "report_type": "Final bilingual audio quality audit snapshot",
+  "snapshot_date": "2026-11-25",
+  "source": "Terminal output supplied by the project owner",
+  "audio_files": {
+    "hindi": "output/final_mixes/hindi_final_mix.wav",
+    "english": "output/final_mixes/english_final_mix.wav"
+  },
+  "processing_policy": {
+    "analysis_is_read_only": true,
+    "audio_changed_by_analyzer": false,
+    "elevenlabs_api_used": false,
+    "additional_elevenlabs_credits_used_for_analysis": 0,
+    "raw_audio_binaries_committed_to_repository": false
+  },
+  "audit_history": {
+    "initial_pre_gain_reaudit": {
+      "hindi": {
+        "duration_minutes": 6.75,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "subtype": "PCM_16",
+        "file_size_mb": 74.17,
+        "sample_peak_dbfs": 0,
+        "rms_dbfs": -13.83,
+        "samples_at_or_above_minus_0_01_dbfs": 390036,
+        "near_silence_percent": 3.7,
+        "near_silence_regions_200ms_or_longer": 18
+      },
+      "english": {
+        "duration_minutes": 5.97,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "subtype": "PCM_16",
+        "file_size_mb": 65.63,
+        "sample_peak_dbfs": 0,
+        "rms_dbfs": -14.67,
+        "samples_at_or_above_minus_0_01_dbfs": 413475,
+        "near_silence_percent": 3.63,
+        "near_silence_regions_200ms_or_longer": 21
+      },
+      "ebu_r128_measurements": "Unavailable in this first run because FFmpeg was not yet detected on PATH."
+    },
+    "latest_post_gain_reaudit": {
+      "analyzer_status": "PASS",
+      "hindi": {
+        "duration_minutes": 6.75,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "file_size_mb": 74.17,
+        "sample_peak_dbfs": -0.88,
+        "rms_dbfs": -25.82,
+        "samples_at_or_above_minus_0_01_dbfs": 0,
+        "integrated_loudness_lufs": -23.72,
+        "loudness_range_lu": 17.6,
+        "true_peak_dbtp": -0.88,
+        "near_silence_threshold_dbfs": -55,
+        "near_silence_percent": 5.18,
+        "near_silence_regions_200ms_or_longer": 18,
+        "warnings": [
+          "PCM_16; a 24-bit delivery master was listed as an optional target, not a required correction.",
+          "48 kHz differs from the earlier 44.1 kHz project reference; 48 kHz is not inherently invalid."
+        ]
+      },
+      "english": {
+        "duration_minutes": 5.97,
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "file_size_mb": 65.63,
+        "sample_peak_dbfs": -1.2,
+        "rms_dbfs": -26.17,
+        "samples_at_or_above_minus_0_01_dbfs": 0,
+        "integrated_loudness_lufs": -24.34,
+        "loudness_range_lu": 12.2,
+        "true_peak_dbtp": -1.2,
+        "near_silence_threshold_dbfs": -55,
+        "near_silence_percent": 3.69,
+        "near_silence_regions_200ms_or_longer": 10,
+        "warnings": [
+          "PCM_16; a 24-bit delivery master was listed as an optional target, not a required correction.",
+          "48 kHz differs from the earlier 44.1 kHz project reference; 48 kHz is not inherently invalid."
+        ]
+      }
+    }
+  },
+  "methodology_and_interpretation": {
+    "sample_peak": "Maximum decoded sample amplitude, expressed in dBFS.",
+    "rms": "Whole-file RMS signal level, expressed in dBFS; this is not a perceptual loudness measurement.",
+    "near_full_scale_counter": "The analyzer counts samples with absolute normalized amplitude >= 0.999 (approximately -0.01 dBFS). This is a near-full-scale counter, not proof of hard clipping.",
+    "integrated_loudness": "FFmpeg loudnorm EBU R128 analysis pass; read-only measurement, not normalization.",
+    "loudness_range": "LRA measured by the EBU R128 loudness analysis pass.",
+    "true_peak": "True-peak estimate measured by the EBU R128 loudness analysis pass.",
+    "near_silence": "Share of 100 ms windows below -55 dBFS RMS. These regions may be intentional horror pauses and are not automatically defects."
+  },
+  "interpretation": [
+    "Both latest final mix WAV files were decoded and inspected successfully by the local analyzer.",
+    "The latest near-full-scale sample counter is zero for both mixes.",
+    "The Hindi integrated loudness is -23.72 LUFS and the English integrated loudness is -24.34 LUFS, a 0.62 LU difference.",
+    "The Hindi true peak is -0.88 dBTP and the English true peak is -1.20 dBTP.",
+    "The Hindi LRA is 17.60 LU; the English LRA is 12.20 LU. These values indicate different loudness dynamics; they do not independently establish dialogue intelligibility or mix quality.",
+    "No objective dialogue-versus-music separation measurement or listening-based quality approval is included in this snapshot."
+  ],
+  "final_decision": {
+    "audio_changes_after_this_snapshot": "None planned by project owner; current mixes are being retained as-is.",
+    "outstanding_documentation_note": "The current analyzer's near-full-scale counter must not be described as a definitive hard-clipping detector.",
+    "status": "Technical measurements documented; subjective listening and dialogue intelligibility are separate review criteria."
+  }
+}
