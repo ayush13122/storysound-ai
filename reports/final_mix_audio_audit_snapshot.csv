@@ -1,0 +1,5 @@
+audit_stage,language,duration_minutes,sample_rate_hz,channels,subtype,file_size_mb,sample_peak_dbfs,rms_dbfs,samples_at_or_above_minus_0_01_dbfs,integrated_loudness_lufs,loudness_range_lu,true_peak_dbtp,near_silence_threshold_dbfs,near_silence_percent,near_silence_regions_200ms_or_longer
+initial_pre_gain_reaudit,Hindi,6.75,48000,2,PCM_16,74.17,0,-13.83,390036,,,,-55,3.7,18
+initial_pre_gain_reaudit,English,5.97,48000,2,PCM_16,65.63,0,-14.67,413475,,,,-55,3.63,21
+latest_post_gain_reaudit,Hindi,6.75,48000,2,PCM_16,74.17,-0.88,-25.82,0,-23.72,17.6,-0.88,-55,5.18,18
+latest_post_gain_reaudit,English,5.97,48000,2,PCM_16,65.63,-1.2,-26.17,0,-24.34,12.2,-1.2,-55,3.69,10
