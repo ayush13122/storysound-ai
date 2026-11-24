@@ -1,5 +1,12 @@
-# Raw Audio
+# Raw Voice Audio
 
-Store original AI-generated voice tracks here during local development.
+The Hindi and English scene-level narration WAVs are stored in:
 
-Large audio binaries are excluded from Git by default. For portfolio samples, use short files that you own or are licensed to share, and consider Git LFS or an external portfolio link when appropriate.
+- `assets/raw_audio/hindi/`
+- `assets/raw_audio/english/`
+
+These selected WAV files are tracked with Git LFS. Keep original scene exports unchanged. Large files are stored by LFS rather than regular Git objects.
+
+The raw narration was generated with ElevenLabs. The project's generation used the Free plan, so any public sharing must remain non-commercial and include attribution to ElevenLabs under the applicable plan terms. Do not use these files in client work, monetized content, or other commercial distribution without the appropriate rights.
+
+Do not place downloaded stock music or sound-effect source files in these folders. Keep BGM/SFX in their dedicated local folders and document source URLs and license details.
