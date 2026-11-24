@@ -1,7 +1,7 @@
 # StorySound AI
 ## AI-Powered Multilingual Audio Production Studio
 
-**Status: In Progress — Bilingual story scripting and credit planning completed**
+**Status: Bilingual story production and technical audio audit completed — portfolio packaging in progress**
 
 StorySound AI is an end-to-end learning and portfolio project focused on producing Hindi and English audio stories through AI-assisted voice generation, hands-on audio editing, sound design, and Python-based audio analysis.
 
@@ -81,3 +81,18 @@ python src/credit_budget.py
 ```
 
 Before voice generation, update the balance snapshot and confirm actual voice multipliers in the ElevenLabs interface. The script is a local estimate only and does not read the live account balance.
+
+
+### Audio analysis and quality audit
+
+The project includes local Python tooling for source WAV inspection, scene-master assembly, and read-only technical analysis of the finished Hindi and English mixes:
+
+- `src/audio_audit.py`: checks the 10 scene-level WAVs (five per language).
+- `src/build_story_masters.py`: assembles scene-level WAVs into language masters.
+- `src/analyze_final_mixes.py`: measures final-mix metadata, sample peak, RMS, near-silence, and—when FFmpeg is installed—EBU R128 Integrated Loudness, LRA, and True Peak.
+- `reports/final_mix_audio_audit.md`: final measurement report and methodology.
+- `reports/final_mix_audio_audit_snapshot.json` and `reports/final_mix_audio_audit_snapshot.csv`: machine-readable audit snapshots.
+
+The latest user-supplied measurement snapshot records Hindi at -23.72 LUFS / -0.88 dBTP and English at -24.34 LUFS / -1.20 dBTP. Both latest files had zero samples at or above the analyzer's -0.01 dBFS near-full-scale threshold. This counter is not a definitive hard-clipping detector. The current decision is to keep the audio mixes unchanged.
+
+Large WAV/MP3 binaries and Audacity session files are kept locally rather than committed to Git; see `.gitignore`.
