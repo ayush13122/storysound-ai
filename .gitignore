@@ -18,6 +18,20 @@ Thumbs.db
 *.aup3
 .idea/
 
-# Audacity project databases (keep local; do not commit)
+# Audacity project sessions and temporary databases (keep local; do not commit)
 *.aup3
 *.aup4
+*.aup4-shm
+*.aup4-wal
+output/audacity_sessions/
+
+# Keep audio out of Git by default. Selected portfolio voice/final-mix
+# folders below are explicitly re-included and tracked via Git LFS.
+!assets/raw_audio/
+!assets/raw_audio/hindi/
+!assets/raw_audio/hindi/*.wav
+!assets/raw_audio/english/
+!assets/raw_audio/english/*.wav
+!output/final_mixes/
+!output/final_mixes/*.wav
+!output/final_mixes/*.mp3
